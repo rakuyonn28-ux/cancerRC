@@ -1,7 +1,8 @@
 ^LICENSE\.md$
 ^cancerRC\.Rproj$
 ^\.Rproj\.user$
+^\.Rhistory$
+^\.gitignore$
 ^README\.Rmd$
-^README\.html$
 ^PERFORMANCE_REPORT\.md$
 ^man/figures/$
