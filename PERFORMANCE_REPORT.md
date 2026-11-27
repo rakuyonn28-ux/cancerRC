@@ -19,7 +19,7 @@ The seed is `20261115`.
 ## Summary
 
 | Model | Macro-F1 (primary) | Accuracy | Balanced accuracy | Macro AUROC (OvR) | Macro AUPRC (OvR; AP) | Test size |
-|:----------|----------:|----------:|----------:|----------:|----------:|----------:|
+|:---|---:|---:|---:|---:|---:|---:|
 | Full-Matrix Multinomial Classifier | Not available | Not available | Not available | Not available | Not available | No independent test |
 | 15-Feature Panel Classifier | 0.9854 | 0.9877 | 0.9898 | 0.9996 | 0.9972 | 163 |
 | 50-Pathway-Score Classifier | 0.9853 | 0.9877 | 0.9895 | 0.9996 | 0.9974 | 163 |
@@ -107,6 +107,7 @@ Cell values are rounded; no uncertainty intervals or statistical tests are shown
 ## Metric definitions and reproducibility
 
 For each class, precision = TP/(TP + FP), recall = TP/(TP + FN), and F1 = 2TP/(2TP + FP + FN), where TP, FP and FN are one-vs-rest true positives, false positives and false negatives.
+
 Macro-F1, macro AUROC and macro AUPRC are unweighted means of the corresponding five class-level scores.
 
 Balanced accuracy is the mean class recall.
@@ -116,17 +117,13 @@ AUPRC in this report is **average precision**, calculated as the sum of precisio
 Tied scores are grouped.
 A PR curve's no-skill baseline equals the prevalence of that class in the test set.
 
-The results were recalculated from the frozen panel and pathway coefficients and their held-out inputs, with `scripts/40_performance_metrics.R` in the project repository; its confusion counts agree exactly with the respective frozen model records.
-Metric tables and curve points are generated under `report/figures/`, and the figure source and contract are under `report/figures/performance/`.
-The 163 samples are the held-out portion of the fixed-seed fallback split, not an external cohort.
-
 ## Reference evaluation of the original full-matrix model
 
 This section is reserved for the earlier full-matrix model evaluation.
 It is not identical to the full-data refit used in `predict_main()`.
 
 | Metric | Value |
-|:-----------------------------------|:-----------------------------------|
+|:---|:---|
 | AUROC | To be added from the original full-matrix model evaluation |
 | AUPRC | To be added from the original full-matrix model evaluation |
 | Accuracy | To be added from the original full-matrix model evaluation |
