@@ -1,0 +1,31 @@
+Package: cancerRC
+Title: Cancer RNA-seq Classifier
+Version: 0.3.0
+Authors@R:
+    person(
+      given = "BIO215",
+      family = "Group28 Project Team",
+      email = "rakuyonn28@gmail.com",
+      role = c("aut", "cre")
+    )
+Description: Provides documented prediction functions for the BIO215 cancer
+    RNA-seq teaching project. The package carries three frozen classifiers:
+    a full-matrix multinomial model, a 15-feature panel model, and a
+    50-pathway-score model. Each function returns one tumor-class prediction
+    per input row.
+License: MIT + file LICENSE
+URL: https://github.com/rakuyonn28-ux/cancerRC
+BugReports: https://github.com/rakuyonn28-ux/cancerRC/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 4.1.0)
+Imports:
+    nnet
+Suggests:
+    knitr,
+    remotes,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0

@@ -1,0 +1,30 @@
+{
+  "contract": "main_metrics_v1",
+  "model_id": "main_v01",
+  "status": "pending",
+  "reason": "The full-matrix model is a full-801 refit with no held-out split, so this model has no independent accuracy, balanced accuracy or confusion matrix.",
+  "prohibited": "The historical 160-sample scores of the earlier 641-sample model do not describe this object and must not be shown as its metrics.",
+  "available": {
+    "training_samples": 801,
+    "n_features": 100,
+    "classes": [
+      "BRCA",
+      "KIRC",
+      "COAD",
+      "LUAD",
+      "PRAD"
+    ],
+    "model_classes": [
+      "BRCA",
+      "COAD",
+      "KIRC",
+      "LUAD",
+      "PRAD"
+    ],
+    "engine": "nnet::multinom",
+    "decay": 0.1,
+    "convergence": 0,
+    "independent_test": false,
+    "input_scale": "Original supplied log2(norm_count+1); do not log again"
+  }
+}

@@ -1,0 +1,4 @@
+sample_id,predicted_class
+sample_4,BRCA
+sample_6,KIRC
+sample_0,PRAD

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+box-sizing: border-box;
+min-width: 200px;
+max-width: 980px;
+margin: 0 auto;
+padding: 45px;
+padding-top: 0px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="cancer-rna-seq-classifier">Cancer RNA-seq Classifier</h1>
+<ul>
+<li><a href="#cancer-rna-seq-classifier">Cancer RNA-seq Classifier</a>
+<ul>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#exported-functions">Exported functions</a></li>
+<li><a href="#full-matrix-multinomial-classifier-example">Full-Matrix
+Multinomial Classifier example</a></li>
+<li><a href="#id_15-feature-panel-classifier-example">15-Feature Panel
+Classifier example</a></li>
+<li><a href="#id_50-pathway-score-classifier-example">50-Pathway-Score
+Classifier example</a></li>
+<li><a href="#model-contracts">Model contracts</a></li>
+<li><a href="#model-performance-summary">Model Performance
+Summary</a></li>
+<li><a href="#reference-evaluation-of-the-original-full-matrix-model">Reference
+Evaluation of the Original Full-Matrix Model</a></li>
+<li><a href="#package-resources">Package resources</a></li>
+<li><a href="#scope-and-limitations">Scope and limitations</a></li>
+<li><a href="#data-source">Data source</a></li>
+<li><a href="#license">License</a></li>
+</ul></li>
+</ul>
+<h1 id="cancer-rna-seq-classifier-1">Cancer RNA-seq Classifier</h1>
+<p><a href="https://opensource.org/license/MIT"><img role="img" aria-label="License: MIT" src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MiIgaGVpZ2h0PSIyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJMaWNlbnNlOiBNSVQiPjx0aXRsZT5MaWNlbnNlOiBNSVQ8L3RpdGxlPjxmaWx0ZXIgaWQ9ImJsdXIiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjE2Ii8+PC9maWx0ZXI+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4Mj0iMCIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2JiYiIgc3RvcC1vcGFjaXR5PSIuMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1vcGFjaXR5PSIuMSIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJyIj48cmVjdCB3aWR0aD0iODIiIGhlaWdodD0iMjAiIHJ4PSIzIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjcikiPjxyZWN0IHdpZHRoPSI1MSIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjUxIiB3aWR0aD0iMzEiIGhlaWdodD0iMjAiIGZpbGw9IiNkOGI4MDAiLz48cmVjdCB3aWR0aD0iODIiIGhlaWdodD0iMjAiIGZpbGw9InVybCgjcykiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48ZyB0cmFuc2Zvcm09InNjYWxlKC4xKSI+PGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiMwMTAxMDEiPjx0ZXh0IHg9IjI2NSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii44IiBmaWx0ZXI9InVybCgjYmx1cikiIHRleHRMZW5ndGg9IjQxMCI+TGljZW5zZTwvdGV4dD48dGV4dCB4PSIyNjUiIHk9IjE1MCIgZmlsbC1vcGFjaXR5PSIuMyIgdGV4dExlbmd0aD0iNDEwIj5MaWNlbnNlPC90ZXh0PjwvZz48dGV4dCB4PSIyNjUiIHk9IjE0MCIgdGV4dExlbmd0aD0iNDEwIj5MaWNlbnNlPC90ZXh0PjwvZz48ZyB0cmFuc2Zvcm09InNjYWxlKC4xKSI+PGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiMwMTAxMDEiPjx0ZXh0IHg9IjY1NSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii44IiBmaWx0ZXI9InVybCgjYmx1cikiIHRleHRMZW5ndGg9IjIxMCI+TUlUPC90ZXh0Pjx0ZXh0IHg9IjY1NSIgeT0iMTUwIiBmaWxsLW9wYWNpdHk9Ii4zIiB0ZXh0TGVuZ3RoPSIyMTAiPk1JVDwvdGV4dD48L2c+PHRleHQgeD0iNjU1IiB5PSIxNDAiIHRleHRMZW5ndGg9IjIxMCI+TUlUPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="License: MIT" /></a></p>
+<p><strong>Package name:</strong> <code>cancerRC</code></p>
+<p><a href="https://www.kaggle.com/datasets/waalbannyantudre/gene-expression-cancer-rna-seq-donated-on-682016">Cancer
+RNA-seq datasets</a> contain thousands of gene-expression variables,
+which makes tumor-class prediction and model deployment difficult. This
+package addresses the problem by providing prediction functions for
+three pre-trained classifiers. Its inputs include 20,531
+<code>gene_XX</code> expression columns, 15 selected gene features, or
+50 Hallmark ssGSEA pathway scores (depending on the classifier). The
+cancer classes are <code>BRCA</code>, <code>KIRC</code>,
+<code>COAD</code>, <code>LUAD</code>, and <code>PRAD</code>.</p>
+<p>The package covers the three classifiers used in the prediction
+module of our <a href="https://bio215-leyang.shinyapps.io/Group28_Cancer-rnaseq-db/">web
+app</a>:</p>
+<ul>
+<li>the Full-Matrix Multinomial Classifier;</li>
+<li>the 15-Feature Panel Classifier;</li>
+<li>the 50-Pathway-Score Classifier.</li>
+</ul>
+<p>The package provides these pre-trained models. It does not train any
+additional model at runtime. It returns one predicted tumor class per
+sample row.</p>
+<p>Note: This package was developed for the group coursework of the
+BIO215 project.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>We acknowledge the frozen full-matrix model and its associated
+original 80/20 evaluation materials. The reference ROC and
+precision-recall curves, AUROC, AUPRC, and accuracy values describe that
+earlier full-matrix model evaluation. They do not describe the full-data
+refit shipped in <code>predict_main()</code>.</p>
+<h2 id="installation">Installation</h2>
+<p>Install the package from GitHub with <code>remotes</code>:</p>
+<p>Note: Install the package <code>remotes</code> if you haven’t.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="st">&quot;rakuyonn28-ux/cancerRC&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="at">upgrade =</span> <span class="st">&quot;never&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>)</span></code></pre></div>
+<p>Alternatively, install the package from GitHub with
+<code>devtools</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;rakuyonn28-ux/cancerRC&quot;</span>)</span></code></pre></div>
+<h2 id="exported-functions">Exported functions</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Function</th>
+<th align="left">Model</th>
+<th align="left">Input</th>
+<th align="left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>predict_main()</code></td>
+<td align="left">Full-Matrix Multinomial Classifier
+<code>main_v01</code></td>
+<td align="left">20,531 gene-expression columns</td>
+<td align="left">Character class labels</td>
+</tr>
+<tr>
+<td align="left"><code>predict_panel()</code></td>
+<td align="left">15-Feature Panel Classifier <code>panel_v01</code></td>
+<td align="left">15 selected gene columns</td>
+<td align="left">Character class labels</td>
+</tr>
+<tr>
+<td align="left"><code>predict_pathway()</code></td>
+<td align="left">50-Pathway-Score Classifier
+<code>pathway_v01</code></td>
+<td align="left">50 Hallmark ssGSEA scores</td>
+<td align="left">Character class labels</td>
+</tr>
+</tbody>
+</table>
+<p>All functions preserve input row order. The <code>sample_id</code>
+column is optional. It is not used as a predictor. A <code>class</code>
+column is also ignored.</p>
+<h2 id="full-matrix-multinomial-classifier-example">Full-Matrix
+Multinomial Classifier example</h2>
+<p>This model’s input is all 20,531 <code>gene_XX</code> columns. It
+uses the 100 columns listed in <code>features.csv</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(cancerRC)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>full_matrix_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;main_example_input.csv&quot;</span>, <span class="at">package =</span> <span class="st">&quot;cancerRC&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>)</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>full_matrix_input <span class="ot">&lt;-</span> utils<span class="sc">::</span><span class="fu">read.csv</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  full_matrix_file, <span class="at">check.names =</span> <span class="cn">FALSE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>)</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>full_matrix_prediction <span class="ot">&lt;-</span> <span class="fu">predict_main</span>(full_matrix_input)</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>  <span class="at">sample_id =</span> full_matrix_input<span class="sc">$</span>sample_id,</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>  <span class="at">predicted_class =</span> full_matrix_prediction</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>)</span></code></pre></div>
+<p>The Full-Matrix Multinomial Classifier input remains on the original
+supplied <code>log2(norm_count + 1)</code> scale. The function applies
+the frozen means and standard deviations internally. Please do not
+log-transform or standardize the data a second time.</p>
+<h2 id="id_15-feature-panel-classifier-example">15-Feature Panel
+Classifier example</h2>
+<p>15-Feature Panel Classifier uses 15 selected <code>gene_XX</code>
+features.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>panel_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;panel_example_input.csv&quot;</span>, <span class="at">package =</span> <span class="st">&quot;cancerRC&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>)</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>panel_input <span class="ot">&lt;-</span> utils<span class="sc">::</span><span class="fu">read.csv</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  panel_file, <span class="at">check.names =</span> <span class="cn">FALSE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>panel_prediction <span class="ot">&lt;-</span> <span class="fu">predict_panel</span>(panel_input)</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>  <span class="at">sample_id =</span> panel_input<span class="sc">$</span>sample_id,</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>  <span class="at">predicted_class =</span> panel_prediction</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>)</span></code></pre></div>
+<p>The model bundle stores the feature order, centers, scales,
+coefficients, and reference ranges. Values outside the fitted P1-P99
+bands will generate a warning but are retained for scoring. Missing,
+duplicated, non-numeric, and non-finite values will stop the prediction
+with an error message.</p>
+<h2 id="id_50-pathway-score-classifier-example">50-Pathway-Score
+Classifier example</h2>
+<p>50-Pathway-Score Classifier uses 50 precomputed MSigDB Hallmark
+ssGSEA scores. The package exposes this lightweight score-matrix entry
+point.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>pathway_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;pathway_example_input.csv&quot;</span>, <span class="at">package =</span> <span class="st">&quot;cancerRC&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>)</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>pathway_input <span class="ot">&lt;-</span> utils<span class="sc">::</span><span class="fu">read.csv</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  pathway_file, <span class="at">check.names =</span> <span class="cn">FALSE</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>)</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>pathway_prediction <span class="ot">&lt;-</span> <span class="fu">predict_pathway</span>(pathway_input)</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>  <span class="at">sample_id =</span> pathway_input<span class="sc">$</span>sample_id,</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>  <span class="at">predicted_class =</span> pathway_prediction</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>)</span></code></pre></div>
+<p>The package does not export the full-profile pathway-scoring route.
+It accepts precomputed pathway scores only. The Shiny application
+maintains its own full-profile transformation outside this package
+contract. The package keeps the classifier entry point small and
+independent of application runtime code.</p>
+<h2 id="model-contracts">Model contracts</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Model</th>
+<th align="left">Algorithm</th>
+<th align="left">Training or holdout scope</th>
+<th align="left">Required input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Full-Matrix Multinomial Classifier
+<code>main_v01</code></td>
+<td align="left"><code>nnet::multinom</code></td>
+<td align="left">801-row full-data refit</td>
+<td align="left">All 20,531 gene columns</td>
+</tr>
+<tr>
+<td align="left">15-Feature Panel Classifier <code>panel_v01</code></td>
+<td align="left">Frozen multinomial <code>glmnet</code>
+coefficients</td>
+<td align="left">638 train, 163 holdout</td>
+<td align="left">15 selected gene columns</td>
+</tr>
+<tr>
+<td align="left">50-Pathway-Score Classifier
+<code>pathway_v01</code></td>
+<td align="left">Frozen multinomial <code>glmnet</code>
+coefficients</td>
+<td align="left">638 train, 163 holdout</td>
+<td align="left">50 Hallmark score columns</td>
+</tr>
+</tbody>
+</table>
+<p>The five fixed classes are <code>BRCA</code>, <code>KIRC</code>,
+<code>COAD</code>, <code>LUAD</code>, and <code>PRAD</code>.</p>
+<h2 id="model-performance-summary">Model Performance Summary</h2>
+<p>The Full-Matrix Multinomial Classifier has no independent test set.
+The other two classifiers use the fixed-seed stratified 80/20 fallback
+split.</p>
+<p>Macro-F1 is the primary metric because it weights the five classes
+equally when their sample counts differ. The test set contains 163
+samples. All reported values are point estimates from a single internal
+holdout split.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Model</th>
+<th align="right">Macro-F1 (primary)</th>
+<th align="right">Accuracy</th>
+<th align="right">Balanced accuracy</th>
+<th align="right">Macro AUROC</th>
+<th align="right">Macro AUPRC (AP)</th>
+<th align="right">Test size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Full-Matrix Multinomial Classifier</td>
+<td align="right">Not available</td>
+<td align="right">Not available</td>
+<td align="right">Not available</td>
+<td align="right">Not available</td>
+<td align="right">Not available</td>
+<td align="right">No independent test</td>
+</tr>
+<tr>
+<td align="left">15-Feature Panel Classifier</td>
+<td align="right">0.9854</td>
+<td align="right">0.9877</td>
+<td align="right">0.9898</td>
+<td align="right">0.9996</td>
+<td align="right">0.9972</td>
+<td align="right">163</td>
+</tr>
+<tr>
+<td align="left">50-Pathway-Score Classifier</td>
+<td align="right">0.9853</td>
+<td align="right">0.9877</td>
+<td align="right">0.9895</td>
+<td align="right">0.9996</td>
+<td align="right">0.9974</td>
+<td align="right">163</td>
+</tr>
+</tbody>
+</table>
+<p>AUROC uses one-vs-rest evaluation. Macro AUROC is the unweighted mean
+across the five classes. AUPRC uses average precision for each
+one-vs-rest problem. Macro AUPRC is the unweighted mean across the five
+classes. The random precision-recall baseline is the class prevalence in
+the holdout set.</p>
+<p><a href="PERFORMANCE_REPORT.md">Read the detailed performance
+report</a>, including the metric definitions, aggregate model metrics,
+and evaluation scope.</p>
+<p>The Full-Matrix Multinomial Classifier used all 801 rows for the
+full-data refit. Historical metrics from another version must not be
+assigned to this object.</p>
+<p>The 15-Feature Panel Classifier and 50-Pathway-Score Classifier use a
+fixed-seed stratified fallback split. This split is distinct from the
+original full-matrix model evaluation split. Their metrics should not be
+compared directly with the full-data refit.</p>
+<h2 id="reference-evaluation-of-the-original-full-matrix-model">Reference
+Evaluation of the Original Full-Matrix Model</h2>
+<p>This section is reserved for the earlier full-matrix model
+evaluation. It will include aggregate ROC and precision-recall figures,
+AUROC, AUPRC, accuracy, and balanced accuracy after the source
+evaluation record is supplied. No per-class performance is required for
+this reference section.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Metric</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">AUROC</td>
+<td align="left">To be added from the original full-matrix model
+evaluation</td>
+</tr>
+<tr>
+<td align="left">AUPRC</td>
+<td align="left">To be added from the original full-matrix model
+evaluation</td>
+</tr>
+<tr>
+<td align="left">Accuracy</td>
+<td align="left">To be added from the original full-matrix model
+evaluation</td>
+</tr>
+<tr>
+<td align="left">Balanced accuracy</td>
+<td align="left">To be added from the original full-matrix model
+evaluation</td>
+</tr>
+<tr>
+<td align="left">Test size</td>
+<td align="left">To be confirmed from the evaluation record</td>
+</tr>
+<tr>
+<td align="left">Aggregate ROC figure</td>
+<td align="left">To be added</td>
+</tr>
+<tr>
+<td align="left">Aggregate precision-recall figure</td>
+<td align="left">To be added</td>
+</tr>
+</tbody>
+</table>
+<p>The reference results will describe the original full-matrix model
+evaluation. They will not describe the full-data refit shipped in
+<code>predict_main()</code>.</p>
+<h2 id="package-resources">Package resources</h2>
+<p>The installed package includes:</p>
+<ul>
+<li>Full-Matrix Multinomial Classifier model, selected-feature schema,
+and full-matrix feature schema;</li>
+<li>15-Feature Panel Classifier panel bundle and 15-feature schema;</li>
+<li>50-Pathway-Score Classifier pathway bundle and 50-score schema;</li>
+<li>label-free toy inputs and expected class outputs;</li>
+<li>model cards, metric records, and the model contract.</li>
+</ul>
+<p>Use <code>system.file(&quot;extdata&quot;, ..., package = &quot;cancerRC&quot;)</code> to
+locate installed resources. The detailed performance report and its
+figures are available in the source repository; their presence in an
+installed package is not required for prediction.</p>
+<h2 id="scope-and-limitations">Scope and limitations</h2>
+<p>This package was developed for the BIO215 group project.</p>
+<p>It is not a diagnostic tool. It is not a clinical risk score. It is
+not validated for unknown tumor classes or clinical deployment.</p>
+<h2 id="data-source">Data source</h2>
+<p>The project uses the UCI Gene Expression Cancer RNA-seq dataset
+distributed through Kaggle:</p>
+<p><a href="https://www.kaggle.com/datasets/waalbannyantudre/gene-expression-cancer-rna-seq-donated-on-682016">https://www.kaggle.com/datasets/waalbannyantudre/gene-expression-cancer-rna-seq-donated-on-682016</a></p>
+<h2 id="license">License</h2>
+<p>MIT. See <code>LICENSE.md</code> for the full terms.</p>
+
+</body>
+</html>

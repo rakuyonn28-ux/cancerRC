@@ -1,0 +1,41 @@
+{
+  "cv_balanced_accuracy": 0.9852,
+  "cv_balanced_accuracy_sd": 0.0112,
+  "cv_folds": 5,
+  "cv_lambda": 0.0032,
+  "holdout_accuracy": 0.9877,
+  "holdout_balanced_accuracy": 0.9895,
+  "holdout_n": 163,
+  "per_class": [
+    {
+      "class": "BRCA",
+      "n_test": 60,
+      "recall": 0.9833,
+      "_row": "BRCA"
+    },
+    {
+      "class": "KIRC",
+      "n_test": 30,
+      "recall": 1,
+      "_row": "KIRC"
+    },
+    {
+      "class": "COAD",
+      "n_test": 16,
+      "recall": 1,
+      "_row": "COAD"
+    },
+    {
+      "class": "LUAD",
+      "n_test": 29,
+      "recall": 1,
+      "_row": "LUAD"
+    },
+    {
+      "class": "PRAD",
+      "n_test": 28,
+      "recall": 0.9643,
+      "_row": "PRAD"
+    }
+  ]
+}

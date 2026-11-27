@@ -1,0 +1,9 @@
+sample_id,predicted_class
+sample_4,BRCA
+sample_8,BRCA
+sample_6,KIRC
+sample_11,KIRC
+sample_26,COAD
+sample_47,COAD
+sample_1,LUAD
+sample_0,PRAD
