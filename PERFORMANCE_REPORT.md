@@ -93,10 +93,9 @@ The x-axis is truncated to display differences near one.
 
 ![One-vs-rest ROC and precision-recall curves](man/figures/perf_fig2_roc_prc.png)
 
-**Class-specific one-vs-rest ROC and precision-recall curves.** (a–e) ROC curves for BRCA, KIRC, COAD, LUAD and PRAD, respectively; the x-axis is false-positive rate and the y-axis is true-positive rate.
-(f–j) Precision-recall curves for the same classes, with recall on the x-axis and precision on the y-axis.
+**Class-specific one-vs-rest ROC and precision-recall curves.** (a–e) ROC curves for BRCA, KIRC, COAD, LUAD and PRAD, respectively.
+(f–j) Precision-recall curves for the same classes.
 Line style distinguishes the two models; the dotted reference is the chance diagonal for ROC and the class prevalence for precision-recall.
-Areas are listed separately for each model and class in the tables above.
 
 ![Row-normalized confusion matrices](man/figures/perf_fig3_confusion.png)
 
@@ -139,7 +138,9 @@ It is not identical to the full-data refit used in `predict_main()`.
 The panel and pathway holdout split is a fixed-seed fallback split.
 It is distinct from the original full-matrix model evaluation split.
 The same held-out set is used for both models, and results from one internal split may be optimistic and do not measure external generalization.
+
 Class sizes range from 16 to 60; performance uncertainty is not quantified here.
 If the holdout is repeatedly inspected during model or feature choices, it can no longer serve as an untouched final test.
-The reported metrics are software evaluation records, not clinical validation.
+
+The reported metrics are not clinical validation.
 The classifiers are not diagnostic tools and are not validated for unknown tumor classes.
