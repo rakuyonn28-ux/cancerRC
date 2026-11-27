@@ -1,21 +1,21 @@
 Cancer RNA-seq Classifier
 ================
 
-- [Cancer RNA-seq Classifier](#cancer-rna-seq-classifier)
-  - [Installation](#installation)
-  - [Exported functions](#exported-functions)
-  - [Code Example](#code-example)
-  - [Model contracts](#model-contracts)
-  - [Model Performance](#model-performance)
-  - [Package resources](#package-resources)
-  - [Scope and limitations](#scope-and-limitations)
-  - [Data source](#data-source)
-  - [License](#license)
-
-# Cancer RNA-seq Classifier
-
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Exported functions](#exported-functions)
+- [Code Example](#code-example)
+- [Model contracts](#model-contracts)
+- [Model Performance](#model-performance)
+- [Package resources](#package-resources)
+- [Scope and limitations](#scope-and-limitations)
+- [Data source](#data-source)
+- [License](#license)
+
+## Overview
 
 **Package name:** `cancerRC`
 
@@ -259,8 +259,7 @@ The installed package includes:
 
 Use `system.file("extdata", ..., package = "cancerRC")` to locate
 installed resources. The detailed performance report and its figures are
-available in the source repository; their presence in an installed
-package is not required for prediction.
+available in the source repository but not in the package.
 
 ## Scope and limitations
 
