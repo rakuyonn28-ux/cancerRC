@@ -64,7 +64,7 @@ devtools::install_github("rakuyonn28-ux/cancerRC")
 ## Exported functions
 
 | Function | Model | Input | Output |
-|:-----------------|:-----------------|:-----------------|:-----------------|
+|:---|:---|:---|:---|
 | `predict_main()` | Full-Matrix Multinomial Classifier `main_v01` | 20,531 gene-expression columns | Character class labels |
 | `predict_panel()` | 15-Feature Panel Classifier `panel_v01` | 15 selected gene columns | Character class labels |
 | `predict_pathway()` | 50-Pathway-Score Classifier `pathway_v01` | 50 Hallmark ssGSEA scores | Character class labels |
@@ -73,7 +73,7 @@ All functions preserve input row order. The `sample_id` column is
 optional. It is not used as a predictor. A `class` column is also
 ignored.
 
-## Code Example 
+## Code Example
 
 ### Full-Matrix Multinomial Classifier example
 
@@ -156,7 +156,7 @@ application runtime code.
 ## Model contracts
 
 | Model | Algorithm | Training or holdout scope | Required input |
-|:-----------------|:-----------------|:-----------------|:-----------------|
+|:---|:---|:---|:---|
 | Full-Matrix Multinomial Classifier `main_v01` | `nnet::multinom` | 801-row full-data refit | All 20,531 gene columns |
 | 15-Feature Panel Classifier `panel_v01` | Frozen multinomial `glmnet` coefficients | 638 train, 163 holdout | 15 selected gene columns |
 | 50-Pathway-Score Classifier `pathway_v01` | Frozen multinomial `glmnet` coefficients | 638 train, 163 holdout | 50 Hallmark score columns |
@@ -196,7 +196,7 @@ record is supplied. No per-class performance is required for this
 reference section.
 
 | Metric | Value |
-|:-----------------------------------|:-----------------------------------|
+|:---|:---|
 | AUROC | To be added from the original full-matrix model evaluation |
 | AUPRC | To be added from the original full-matrix model evaluation |
 | Accuracy | To be added from the original full-matrix model evaluation |
@@ -221,7 +221,7 @@ samples. All reported values are point estimates from a single internal
 holdout split.
 
 | Model | Macro-F1 (primary) | Accuracy | Balanced accuracy | Macro AUROC | Macro AUPRC (AP) | Test size |
-|:----------|----------:|----------:|----------:|----------:|----------:|----------:|
+|:---|---:|---:|---:|---:|---:|---:|
 | Full-Matrix Multinomial Classifier | Not available | Not available | Not available | Not available | Not available | No independent test |
 | 15-Feature Panel Classifier | 0.9854 | 0.9877 | 0.9898 | 0.9996 | 0.9972 | 163 |
 | 50-Pathway-Score Classifier | 0.9853 | 0.9877 | 0.9895 | 0.9996 | 0.9974 | 163 |
