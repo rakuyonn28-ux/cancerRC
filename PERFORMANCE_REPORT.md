@@ -108,8 +108,10 @@ Cell values are rounded; no uncertainty intervals or statistical tests are shown
 
 For each class, precision = TP/(TP + FP), recall = TP/(TP + FN), and F1 = 2TP/(2TP + FP + FN), where TP, FP and FN are one-vs-rest true positives, false positives and false negatives.
 Macro-F1, macro AUROC and macro AUPRC are unweighted means of the corresponding five class-level scores.
+
 Balanced accuracy is the mean class recall.
 AUROC is the trapezoidal area of the empirical OvR ROC; it was independently cross-checked against `pROC`.
+
 AUPRC in this report is **average precision**, calculated as the sum of precision multiplied by the increase in recall at each distinct score threshold; it is not trapezoidal PR area.
 Tied scores are grouped.
 A PR curve's no-skill baseline equals the prevalence of that class in the test set.
